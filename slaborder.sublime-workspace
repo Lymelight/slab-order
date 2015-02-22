@@ -1,0 +1,371 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"A",
+				"Article"
+			],
+			[
+				"h",
+				"h1	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Application Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register all of the routes for an application.\n| It's a breeze. Simply tell Laravel the URIs it should respond to\n| and give it the controller to call when that URI is requested.\n|\n*/\n\nRoute::get('/', 'WelcomeController@index');\n\nRoute::get('/test', 'WelcomeController@test');\n\nRoute::get('home', 'HomeController@index');\n\nRoute::controllers([\n	'auth' => 'Auth\\AuthController',\n	'password' => 'Auth\\PasswordController',\n]);\n",
+			"file": "app/Http/routes.php",
+			"file_size": 585,
+			"file_write_time": 130683313980000000,
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/WelcomeController.php",
+			"settings":
+			{
+				"buffer_size": 826,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/CMills/Desktop/Webdev/slab-order",
+		"/Users/CMills/Desktop/Webdev/slab-order/database",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations"
+	],
+	"file_history":
+	[
+		"/Users/CMills/Desktop/Webdev/slab-order/config/database.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/.env",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/definition_astext.txt",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/welcome.blade.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/way/generators/tests/stubs/RecentOrdersTableSeeder.txt",
+		"/Users/CMills/Desktop/Webdev/larabook/public/index.php",
+		"/Users/CMills/Desktop/Webdev/larabook/app/Http/Controllers/PagesController.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/phpunit/phpunit/src/Framework/Constraint/IsNull.php",
+		"/Users/CMills/Desktop/Webdev/larabook/artisan",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/composer/autoload_real.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailInvoker.php",
+		"/Users/CMills/Desktop/Webdev/larabook/config/mail.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php",
+		"/Users/CMills/Desktop/Webdev/larabook/composer.json",
+		"/Users/CMills/Desktop/Webdev/larabook/resources/lang/en/pagination.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/phpunit/phpunit/build/phar-autoload.php.in",
+		"/Users/CMills/Desktop/Webdev/larabook/package.json",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php",
+		"/Users/CMills/Desktop/Webdev/larabook/app/Providers/RouteServiceProvider.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/doctrine/dbal/lib/Doctrine/DBAL/Exception/ReadOnlyException.php",
+		"/Users/CMills/Desktop/Webdev/larabook/readme.md",
+		"/Users/CMills/Desktop/Webdev/larabook/resources/views/pages/contact.blade.php",
+		"/Users/CMills/Desktop/Webdev/larabook/app/Http/Controllers/Controller.php",
+		"/Users/CMills/Desktop/Webdev/larabook/resources/views/welcome.blade.php",
+		"/Users/CMills/Desktop/Webdev/larabook/config/view.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/symfony/finder/Symfony/Component/Finder/Expression/ValueInterface.php",
+		"/Users/CMills/Desktop/Webdev/larabook/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php",
+		"/Users/CMills/Desktop/Webdev/larabook/app/Http/Controllers/WelcomeController.php",
+		"/private/etc/hosts"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								632,
+								632
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Controllers/WelcomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								816,
+								816
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "slaborder.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"datab",
+				"config/database.php"
+			],
+			[
+				"welc",
+				"app/Http/Controllers/WelcomeController.php"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"article",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"artic",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"route",
+				"app/Http/routes.php"
+			],
+			[
+				"index",
+				"resources/views/articles/index.blade.php"
+			],
+			[
+				"inde",
+				"resources/views/articles/index.blade.php"
+			],
+			[
+				"articles",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"art",
+				"app/Http/Controllers/ArticlesController.php"
+			],
+			[
+				"article.b",
+				"resources/views/articles/index.blade.php"
+			],
+			[
+				"rout",
+				"app/Http/routes.php"
+			],
+			[
+				"ro",
+				"app/Http/routes.php"
+			],
+			[
+				"r",
+				"app/Http/routes.php"
+			],
+			[
+				"migra",
+				"vendor/way/generators/tests/features/migrations.feature"
+			],
+			[
+				"abo",
+				"resources/views/pages/about.blade.php"
+			],
+			[
+				"pages",
+				"app/Http/Controllers/PagesController.php"
+			],
+			[
+				"about",
+				"resources/views/pages/about.blade.php"
+			],
+			[
+				"contact",
+				"resources/views/pages/contact.blade.php"
+			],
+			[
+				"",
+				"app/Http/Controllers/PagesController.php"
+			],
+			[
+				"welcome",
+				"app/Http/Controllers/WelcomeController.php"
+			],
+			[
+				"we",
+				"resources/views/welcome.blade.php"
+			],
+			[
+				"welco",
+				"app/Http/Controllers/WelcomeController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
