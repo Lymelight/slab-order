@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"form"
+			],
+			[
+				"Form",
+				"Form::open	Open a Form"
+			],
+			[
+				"section",
+				"section"
+			],
+			[
+				"For",
+				"Form::open	Open a Form"
+			],
+			[
+				"F",
+				"Form::open	Open a Form"
+			],
+			[
+				"FOR",
+				"Form::open	Open a Form"
+			],
+			[
+				"FO",
+				"Form::input	Generate a File Input element (name, attributes)"
+			],
+			[
+				"custom",
+				"customization_group_id"
+			],
+			[
+				"cust",
+				"customization_group_id"
+			],
+			[
 				"A",
 				"Article"
 			],
@@ -16,21 +52,26 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Application Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register all of the routes for an application.\n| It's a breeze. Simply tell Laravel the URIs it should respond to\n| and give it the controller to call when that URI is requested.\n|\n*/\n\nRoute::get('/', 'WelcomeController@index');\n\nRoute::get('/test', 'WelcomeController@test');\n\nRoute::get('home', 'HomeController@index');\n\nRoute::controllers([\n	'auth' => 'Auth\\AuthController',\n	'password' => 'Auth\\PasswordController',\n]);\n",
-			"file": "app/Http/routes.php",
-			"file_size": 585,
-			"file_write_time": 130683313980000000,
+			"file": "config/app.php",
 			"settings":
 			{
-				"buffer_size": 633,
+				"buffer_size": 7303,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/WelcomeController.php",
+			"file": "resources/views/business/location.blade.php",
 			"settings":
 			{
-				"buffer_size": 826,
+				"buffer_size": 1739,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/CMills/Library/Application Support/Sublime Text 3/Packages/User/blade-form-open.sublime-snippet",
+			"settings":
+			{
+				"buffer_size": 187,
 				"line_ending": "Unix"
 			}
 		}
@@ -38,11 +79,47 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 87.0,
 		"selected_items":
 		[
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"syntax:bla",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"pa",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 568.0
 	},
 	"console":
 	{
@@ -64,15 +141,107 @@
 	"expanded_folders":
 	[
 		"/Users/CMills/Desktop/Webdev/slab-order",
-		"/Users/CMills/Desktop/Webdev/slab-order/database",
-		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations"
+		"/Users/CMills/Desktop/Webdev/slab-order/app",
+		"/Users/CMills/Desktop/Webdev/slab-order/config",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/business",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/vendor"
 	],
 	"file_history":
 	[
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/routes.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/LocationController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/locations/create.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/locations/update.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/backapp.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/locations/location.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Location.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/nikic/php-parser/lib/PhpParser/Node/Expr/BinaryOp/LogicalOr.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/swiftmailer/swiftmailer/doc/overview.rst",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_044113_create_locations_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_165501_create_c12lens_groups_c12lens_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050116_create_menus_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_045528_create_business_profile_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/public/index.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/phpunit/src/Framework/Constraint/IsNull.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/php-token-stream/tests/_fixture/classInScopedNamespace.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/phpunit/tests/_files/ExceptionInSetUpTest.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/composer/installed.json",
+		"/Users/CMills/Desktop/Webdev/slab-order/config/auth.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_165141_create_products_customization_groups_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_162634_create_users_menus_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050421_create_products_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_164445_create_menus_products_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050916_create_customization_groups_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_051317_create_customizations_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_220953_create_orders_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_165501_create_customizations_customization_groups_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_221636_create_order_customizations_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_27_160919_create_users_locations_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Menu.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_221437_create_order_components_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_051317_create_customization_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/php-code-coverage/tests/_files/BankAccount-clover.xml",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/php-code-coverage/tests/_files/BankAccount.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Business.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/business/dashboard.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/DashboardController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/MenuController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/ProductController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/business/menu.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/business/location.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/Business/LocationController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/Business/DashboardController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/config/app.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/Location.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_221636_create_order_customization_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_221437_create_order_details_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_220953_create_order_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050916_create_customization_group_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/Business.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Middleware/Authenticate.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/bootstrap/autoload.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/routing/Symfony/Component/Routing/Matcher/ApacheUrlMatcher.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/artisan",
+		"/Users/CMills/Desktop/Webdev/slab-order/gulpfile.js",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/GenericEvent.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/GenericEventTest.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/GetResponseEvent.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ReturnConstantGenerator.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/routing/Symfony/Component/Routing/Generator/UrlGeneratorInterface.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/fonts/glyphicons-halflings-regular.svg",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/ExistingConstructorTemplate.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpspec/phpspec/src/PhpSpec/CodeGenerator/Generator/templates/named_constructor_create_object.template",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050116_create_menu_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/danielstjules/stringy/src/Create.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/mtdowling/cron-expression/src/Cron/CronExpression.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/laravel/framework/src/Illuminate/Auth/Passwords/CanResetPassword.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/composer.json",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/CutStub.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/jeremeamia/SuperClosure/src/Exception/ClosureUnserializationException.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/finder/Symfony/Component/Finder/Iterator/CustomFilterIterator.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/phpunit/tests/_files/CustomPrinter.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_050421_create_product_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/nesbot/carbon/tests/CreateFromDateTest.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_045528_create_business_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpspec/phpspec/features/matchers/developer_uses_string_regex_matcher.feature",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/User.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/UriSigner.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/database/migrations/2015_02_22_044113_create_location_table.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/HomeController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/business.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Http/Controllers/WelcomeController.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/app/Providers/BusServiceProvider.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/storage/framework/views/b5c2694f0390e5d74632290ca7eed596",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/welcome.blade.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/phpunit/phpunit/tests/_files/WasRun.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/vendor/jakub-onderka/php-console-highlighter/examples/whole_file_line_numbers.php",
+		"/Users/CMills/Desktop/Webdev/slab-order/resources/assets/less/bootstrap/wells.less",
 		"/Users/CMills/Desktop/Webdev/slab-order/config/database.php",
 		"/Users/CMills/Desktop/Webdev/slab-order/.env",
 		"/Users/CMills/Desktop/Webdev/slab-order/vendor/symfony/console/Symfony/Component/Console/Tests/Fixtures/definition_astext.txt",
-		"/Users/CMills/Desktop/Webdev/slab-order/resources/views/welcome.blade.php",
 		"/Users/CMills/Desktop/Webdev/larabook/vendor/way/generators/tests/stubs/RecentOrdersTableSeeder.txt",
 		"/Users/CMills/Desktop/Webdev/larabook/public/index.php",
 		"/Users/CMills/Desktop/Webdev/larabook/app/Http/Controllers/PagesController.php",
@@ -133,53 +302,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/routes.php",
+					"file": "config/app.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 633,
+						"buffer_size": 7303,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								632,
-								632
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/Controllers/WelcomeController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 826,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								816,
-								816
+								7231,
+								7231
 							]
 						],
 						"settings":
@@ -187,6 +327,64 @@
 							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/business/location.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/CMills/Library/Application Support/Sublime Text 3/Packages/User/blade-form-open.sublime-snippet",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								167,
+								167
+							]
+						],
+						"settings":
+						{
+							"default_extension": "sublime-snippet",
+							"syntax": "Packages/XML/XML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -245,6 +443,82 @@
 		"selected_items":
 		[
 			[
+				"backa",
+				"resources/views/backapp.blade.php"
+			],
+			[
+				"location",
+				"app/Http/Controllers/LocationController.php"
+			],
+			[
+				"routes",
+				"app/Http/routes.php"
+			],
+			[
+				"",
+				"config/app.php"
+			],
+			[
+				"back",
+				"resources/views/backapp.blade.php"
+			],
+			[
+				"ro",
+				"app/Http/routes.php"
+			],
+			[
+				"rout",
+				"app/Http/routes.php"
+			],
+			[
+				"auth",
+				"config/auth.php"
+			],
+			[
+				"route",
+				"app/Http/routes.php"
+			],
+			[
+				"create_order",
+				"database/migrations/2015_02_22_220953_create_order_table.php"
+			],
+			[
+				"customizat",
+				"database/migrations/2015_02_22_051317_create_customization_table.php"
+			],
+			[
+				"customizati",
+				"database/migrations/2015_02_22_050916_create_customization_group_table.php"
+			],
+			[
+				"create_pr",
+				"database/migrations/2015_02_22_050421_create_products_table.php"
+			],
+			[
+				"create_menu",
+				"database/migrations/2015_02_22_050116_create_menu_table.php"
+			],
+			[
+				"user_table",
+				"database/migrations/2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"create_busi",
+				"database/migrations/2015_02_22_045528_create_business_table.php"
+			],
+			[
+				"create_loca",
+				"database/migrations/2015_02_22_044113_create_location_table.php"
+			],
+			[
+				"busi",
+				"app/Http/Controllers/business.php"
+			],
+			[
+				"busines",
+				"app/Http/Controllers/business.php"
+			],
+			[
 				"datab",
 				"config/database.php"
 			],
@@ -253,20 +527,12 @@
 				"app/Http/Controllers/WelcomeController.php"
 			],
 			[
-				"routes",
-				"app/Http/routes.php"
-			],
-			[
 				"article",
 				"app/Http/Controllers/ArticlesController.php"
 			],
 			[
 				"artic",
 				"app/Http/Controllers/ArticlesController.php"
-			],
-			[
-				"route",
-				"app/Http/routes.php"
 			],
 			[
 				"index",
@@ -287,14 +553,6 @@
 			[
 				"article.b",
 				"resources/views/articles/index.blade.php"
-			],
-			[
-				"rout",
-				"app/Http/routes.php"
-			],
-			[
-				"ro",
-				"app/Http/routes.php"
 			],
 			[
 				"r",
@@ -321,10 +579,6 @@
 				"resources/views/pages/contact.blade.php"
 			],
 			[
-				"",
-				"app/Http/Controllers/PagesController.php"
-			],
-			[
 				"welcome",
 				"app/Http/Controllers/WelcomeController.php"
 			],
@@ -341,11 +595,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"~/Desktop/Webdev/larabook/larabook.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -363,7 +621,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 120.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
