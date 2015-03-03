@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateLocationRequest extends Request {
+class LocationRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.

@@ -15,7 +15,10 @@ Route::get('/test', 'WelcomeController@test');
 
 Route::get('/business/dashboard', 'DashboardController@index');
 
+
 Route::resource('/business/locations', 'LocationController');
+
+
 Route::resource('/business/menus', 'MenuController');
 
 Route::controllers([

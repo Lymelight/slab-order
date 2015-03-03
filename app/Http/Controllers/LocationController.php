@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Http\Requests\CreateLocationRequest;
+use App\Http\Requests\LocationRequest;
 use App\Location;
 use App\User;
 use Request;
@@ -20,26 +20,16 @@ class LocationController extends DashboardController {
 		$data = [];
         $data['locations'] = Location::all();
 
-        return view('business\locations', $data);
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return view('business\location', $data);
+        return view('locations.index', $data);
 	}
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param CreateLocationRequest $request
+     * @param LocationRequest $request
      * @return Response
      */
-	public function store(CreateLocationRequest $request)
+	public function store(LocationRequest $request)
     {
 
         $location = new Location($request->all());
@@ -49,40 +39,30 @@ class LocationController extends DashboardController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit($id)
-	{
-		//
+    {
         $location = Location::findOrFail($id);
 
-        return view('business\location\edit');
+        return view('locations.edit', compact('location'));
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @param LocationRequest $request
+     * @return Response
+     */
+	public function update($id, LocationRequest $request)
 	{
-        $location = new Location($request->all());
-        \Auth::user()->locations()->save($location);
+        $location = Location::findOrFail($id);
+
+        $location->update($request->all());
 
         return redirect('business\locations');
 	}

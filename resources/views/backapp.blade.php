@@ -34,8 +34,8 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="/business/dashboard">Home</a></li>
-					<li><a href="/business/location">Locations</a></li>
-					<li><a href="/business/menu">Menus</a></li>
+					<li><a href="/business/locations">Locations</a></li>
+					<li><a href="/business/menus">Menus</a></li>
 					<li><a href="">Orders</a></li>
 					<li><a href="">OrderMaker</a></li>
 				</ul>
