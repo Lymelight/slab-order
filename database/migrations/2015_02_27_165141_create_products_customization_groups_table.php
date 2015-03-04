@@ -18,6 +18,7 @@ class CreateProductsCustomizationGroupsTable extends Migration {
 			$table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 			$table->integer('customization_group_id')->unsigned();
 			$table->foreign('customization_group_id')->references('id')->on('customization_groups')->onDelete('cascade');
+            $table->integer('order');
 		});
 	}
 

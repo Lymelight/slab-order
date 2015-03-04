@@ -18,7 +18,6 @@ class CreateCustomizationGroupsTable extends Migration {
 			$table->string('name');
 			$table->double('price', 6, 2);
 			$table->tinyInteger('required');
-			$table->integer('order');
 			$table->timestamps();
 		});
 	}
