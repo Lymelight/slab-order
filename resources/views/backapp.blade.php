@@ -35,6 +35,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="/business/locations">Locations</a></li>
 					<li><a href="/business/menus">Menus</a></li>
+                    <li><a href="/business/menubuilder">Menu Builder</a></li>
                     <li><a href="/business/products">Products</a></li>
                     <li><a href="/business/customizationgroups">Customization Groups</a></li>
                     <li><a href="/business/customizations">Customizations</a></li>
