@@ -15,6 +15,8 @@ class CreateCustomizationsTable extends Migration {
 		Schema::create('customizations', function(Blueprint $table)
 		{
 			$table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->on('users')->references('id');
 			$table->string('name');
 			$table->double('price', 6, 2);
 			$table->timestamps();

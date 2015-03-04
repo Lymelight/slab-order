@@ -11,13 +11,13 @@
                         Name
                     </td>
                     <td>
-                        Address
+                        Price
                     </td>
                     <td>
-                        Locale
+                        # of Customizations Associated
                     </td>
                     <td>
-                        Status
+                        # of Products Associated
                     </td>
                     <td>
 
@@ -58,7 +58,7 @@
     {!! Form::open(['url' => '/business/customizationgroups']) !!}
         @include('errors.list')
 
-        @include('locations.form', ['submitButtonText' => 'Add Group'])
+        @include('customizationgroups.form', ['submitButtonText' => 'Add Group'])
 
     {!! Form::close() !!}
 
