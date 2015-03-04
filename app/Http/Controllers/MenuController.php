@@ -7,7 +7,7 @@ use App\Http\Requests\MenuRequest;
 use App\Menu;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller {
+class MenuController extends DashboardController {
 
 	/**
 	 * Display a listing of the resource.

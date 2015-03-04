@@ -17,6 +17,7 @@ Route::get('/business/dashboard', 'DashboardController@index');
 
 
 Route::resource('/business/locations', 'LocationController');
+Route::resource('/business/customizationgroups', 'CustomizationGroupController');
 Route::resource('/business/products', 'ProductController');
 Route::resource('/business/menus', 'MenuController');
 

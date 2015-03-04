@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model {
+class CustomizationGroup extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'products';
+	protected $table = 'customization_groups';
 
 	/**
 	 * The attributes that are mass assignable.

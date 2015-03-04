@@ -7,7 +7,7 @@ use App\Http\Requests\ProductRequest;
 use App\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller {
+class ProductController extends DashboardController {
 
 	/**
 	 * Display a listing of the resource.

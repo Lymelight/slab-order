@@ -18,6 +18,7 @@ class CreateC12lensGroupsC12lensTable extends Migration {
 			$table->foreign('customization_group_id')->references('id')->on('customization_groups')->onDelete('cascade');
 			$table->integer('customization_id')->unsigned();
 			$table->foreign('customization_id')->references('id')->on('customizations')->onDelete('cascade');
+            $table->integer('order');
 		});
 	}
 
