@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model {
+class Product extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'menus';
+	protected $table = 'products';
 
 	/**
 	 * The attributes that are mass assignable.

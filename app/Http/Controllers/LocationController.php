@@ -17,8 +17,8 @@ class LocationController extends DashboardController {
 	 */
 	public function index()
 	{
-		$data = [];
-        $data['locations'] = Location::all();
+        $data = [];
+        $data['locations'] = \Auth::user()->locations()->get();
 
         return view('locations.index', $data);
 	}

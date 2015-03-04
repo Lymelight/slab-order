@@ -3,6 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\MenuRequest;
+use App\Menu;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller {
@@ -14,40 +16,35 @@ class MenuController extends Controller {
 	 */
 	public function index()
 	{
-		//
-		return view('business\menu');
+		$data = [];
+        $data['menus'] = \Auth::user()->menus()->get();
+
+        return view('menus.index', $data);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param MenuRequest $request
+     * @return Response
+     */
+	public function store(MenuRequest $request)
 	{
-		//
+        $menu = new Menu($request->all());
+        \Auth::user()->menus()->save($menu);
+
+        return redirect('business\menus');
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+    /**
+     * @param $id
+     */
+    public function show($id)
+    {
+
+    }
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -57,7 +54,9 @@ class MenuController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+        $menu = Menu::findOrFail($id);
+
+        return view('menus.edit', compact('menu'));
 	}
 
 	/**
@@ -66,9 +65,12 @@ class MenuController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, MenuRequest $request)
 	{
-		//
+		$menu = Menu::findOrFail($id);
+        $menu->update($request->all());
+
+        return redirect('business\menus');
 	}
 
 	/**

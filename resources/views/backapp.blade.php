@@ -28,16 +28,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				<a class="navbar-brand" href="/business/dashboard">Slab Order</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/business/dashboard">Home</a></li>
 					<li><a href="/business/locations">Locations</a></li>
 					<li><a href="/business/menus">Menus</a></li>
-					<li><a href="">Orders</a></li>
-					<li><a href="">OrderMaker</a></li>
+                    <li><a href="/business/products">Products</a></li>
+                    <li><a href="/business/customizationgroups">Customization Groups</a></li>
+                    <li><a href="/business/customizations">Customizations</a></li>
+					<li><a href="/business/orders">Orders</a></li>
+					<li><a href="/business/ordermaker">OrderMaker</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
