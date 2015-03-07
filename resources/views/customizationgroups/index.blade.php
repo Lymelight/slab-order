@@ -27,10 +27,10 @@
         @forelse($customization_groups as $customization_group)
             <tr>
                 <td>
-                    {{ customization_group['name'] }}
+                    {{ $customization_group['name'] }}
                 </td>
                 <td>
-                    {{ customization_group['price'] }}
+                    {{ $customization_group['price'] }}
                 </td>
                 <td>
                     Customizations.#
@@ -55,7 +55,7 @@
 @section('sidebar')
 
     <h3>Add New Customization Group:</h3>
-    {!! Form::open(['url' => '/business/customizationgroups']) !!}
+    {!! Form::open(['url' => '/business/customization_groups']) !!}
         @include('errors.list')
 
         @include('customizationgroups.form', ['submitButtonText' => 'Add Group'])

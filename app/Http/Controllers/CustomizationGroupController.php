@@ -38,7 +38,7 @@ class CustomizationGroupController extends DashboardController {
         $customization_group = new CustomizationGroup($request->all());
         \Auth::user()->customizationGroups()->save($customization_group);
 
-        return redirect('business\customizationgroups');
+        return redirect('business\customization_groups');
 	}
 
 	/**
@@ -67,7 +67,7 @@ class CustomizationGroupController extends DashboardController {
 
         $customization_group->update($request->all());
 
-        return redirect('business\customizationgroups');
+        return redirect('business\customization_groups');
 	}
 
 	/**

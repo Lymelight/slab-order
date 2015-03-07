@@ -21,10 +21,10 @@
         @forelse($customizations as $customization)
             <tr>
                 <td>
-                    {{ customization['name'] }}
+                    {{ $customization['name'] }}
                 </td>
                 <td>
-                    {{ customization['price'] }}
+                    {{ $customization['price'] }}
                 </td>
                 <td>
                     <a href="{{ action('CustomizationController@edit', [$customization->id]) }}">Edit</a>

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 
-	<link href="/css/app.css" rel="stylesheet">
+	<link href="/css/base.css" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -35,9 +35,9 @@
 				<ul class="nav navbar-nav">
 					<li><a href="/business/locations">Locations</a></li>
 					<li><a href="/business/menus">Menus</a></li>
-                    <li><a href="/business/menubuilder">Menu Builder</a></li>
+                    <li><a href="/business/menu_builder">Menu Builder</a></li>
                     <li><a href="/business/products">Products</a></li>
-                    <li><a href="/business/customizationgroups">Customization Groups</a></li>
+                    <li><a href="/business/customization_groups">Customization Groups</a></li>
                     <li><a href="/business/customizations">Customizations</a></li>
 					<li><a href="/business/orders">Orders</a></li>
 					<li><a href="/business/ordermaker">OrderMaker</a></li>

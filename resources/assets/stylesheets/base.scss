@@ -1,0 +1,14 @@
+@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "variables.scss";
+@import "fonts.scss";
+
+.component {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  box-shadow: none;
+  display: block;
+  padding: 2.5em;
+}
