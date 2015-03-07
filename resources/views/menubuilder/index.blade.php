@@ -8,16 +8,7 @@
             <div class="component">
                 {{ $menu['name'] }}
                 {{ $menu['location_count'] }}
-                <a href="{{ action('MenuController@edit', [$menu->id]) }}">Edit</a>
-                <div class="row">
-                    Add a product:
-                    <select name="addproduct" id="addproduct">
-                        <option value="1">Test</option>
-                    </select>
-                    <button>
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
+                <a href="{{ action('MenuBuilderController@edit', [$menu->id]) }}">Edit</a>
             </div>
         @empty
             <span>No menus to display</span>
