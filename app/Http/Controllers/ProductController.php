@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 
 class ProductController extends DashboardController {
 
-	/**
+	private function syncCustomizationGroups(Product $product, $customization_groups)
+    {
+        $product->customizationGroups()->sync($customization_groups);
+    }
+
+    /**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -18,6 +23,8 @@ class ProductController extends DashboardController {
 	{
 		$data = [];
         $data['products'] = \Auth::user()->products()->get();
+        $data['customization_groups'] = \Auth::user()->customizationGroups()->lists('name', 'id');
+        $data['customization_groups_selected'] = [];
 
         return view('products.index', $data);
 	}
@@ -32,6 +39,8 @@ class ProductController extends DashboardController {
 	{
         $product = new Product($request->all());
         \Auth::user()->products()->save($product);
+
+        $this->syncCustomizationGroups($product, $request->input('customization_groups'));
 
         return redirect('business\products');
 	}
@@ -56,8 +65,11 @@ class ProductController extends DashboardController {
 	public function edit($id)
 	{
 		$product = Product::findOrFail($id);
+        $data['product'] = $product;
+        $data['customization_groups'] = \Auth::user()->customizationGroups()->lists('name', 'id');
+        $data['customization_groups_selected'] = $product->customizationGroups->lists('id');
 
-        return view('product.edit', compact('product'));
+        return view('products.edit', $data);
 	}
 
     /**
@@ -71,6 +83,8 @@ class ProductController extends DashboardController {
 	{
 		$product = Product::findOrFail($id);
         $product->update($request->all());
+
+        $this->syncCustomizationGroups($product, $request->input('customization_groups'));
 
         return redirect('business\products');
 	}

@@ -14,7 +14,8 @@ class CreateProductsCustomizationGroupsTable extends Migration {
 	{
 		Schema::create('products_customization_groups', function(Blueprint $table)
 		{
-			$table->integer('product_id')->unsigned();
+			$table->increments('id');
+            $table->integer('product_id')->unsigned();
 			$table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 			$table->integer('customization_group_id')->unsigned();
 			$table->foreign('customization_group_id')->references('id')->on('customization_groups')->onDelete('cascade');

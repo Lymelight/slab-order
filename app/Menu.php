@@ -28,6 +28,6 @@ class Menu extends Model {
 
     public function products()
     {
-        return $this->hasMany('App\Product', 'menus_products');
+        return $this->belongsToMany('App\Product', 'menus_products');
     }
 }

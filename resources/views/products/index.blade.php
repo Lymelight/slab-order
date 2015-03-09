@@ -30,7 +30,9 @@
                     {{ $product['price'] }}
                 </td>
                 <td>
-                    Custom.Groups.#
+                    @foreach($product->customizationGroups as $customization_group)
+                        {{$customization_group['name']}}
+                    @endforeach
                 </td>
                 <td>
                     <a href="{{ action('ProductController@edit', [$product->id]) }}">Edit</a>

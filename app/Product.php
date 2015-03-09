@@ -31,6 +31,11 @@ class Product extends Model {
 
     public function menus()
     {
-        return $this->hasMany('App\Menu', 'menus_products');
+        return $this->belongsToMany('App\Menu', 'menus_products');
+    }
+
+    public function customizationGroups()
+    {
+        return $this->belongsToMany('App\CustomizationGroup', 'products_customization_groups');
     }
 }

@@ -28,7 +28,6 @@ class Customization extends Model {
     {
         return $this->belongsTo('App\User');
     }
-
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
