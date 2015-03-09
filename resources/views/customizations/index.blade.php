@@ -43,7 +43,7 @@
 @section('sidebar')
 
     <h3>Add New Customization:</h3>
-    {!! Form::open(['url' => '/business/customizationgroups']) !!}
+    {!! Form::open(['url' => '/business/customizations']) !!}
         @include('errors.list')
 
         @include('customizations.form', ['submitButtonText' => 'Add Customization'])

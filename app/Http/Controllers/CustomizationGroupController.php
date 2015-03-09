@@ -12,7 +12,13 @@ use Request;
 
 class CustomizationGroupController extends DashboardController {
 
-	/**
+	private function syncCustomizations(CustomizationGroup $customization_group, $customizations)
+    {
+
+        $customization_group->customizations()->sync($customizations);
+    }
+
+    /**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -21,8 +27,11 @@ class CustomizationGroupController extends DashboardController {
 	{
         $data = [];
         $data['customization_groups'] = \Auth::user()->customizationGroups()->get();
+        $data['customizations'] = \Auth::user()->customizations()->lists('name', 'id');
+        $data['customizations_selected'] = [];
 
         return view('customizationgroups.index', $data);
+
 	}
 
     /**
@@ -34,9 +43,10 @@ class CustomizationGroupController extends DashboardController {
      */
 	public function store(CustomizationGroupRequest $request)
     {
-
         $customization_group = new CustomizationGroup($request->all());
         \Auth::user()->customizationGroups()->save($customization_group);
+
+        $this->syncCustomizations($customization_group, $request->input('customizations'));
 
         return redirect('business\customization_groups');
 	}
@@ -49,9 +59,13 @@ class CustomizationGroupController extends DashboardController {
 	 */
 	public function edit($id)
     {
-        $customization_group = CustomizationGroup::findOrFail($id);
+        $data = [];
+        $customizationGroup = CustomizationGroup::findOrFail($id);
+        $data['customization_group'] = $customizationGroup;
+        $data['customizations'] = \Auth::user()->customizations()->lists('name', 'id');
+        $data['customizations_selected'] = $customizationGroup->customizations->lists('id');
 
-        return view('customizationgroups.edit', compact('customization_group'));
+        return view('customizationgroups.edit', $data);
 	}
 
     /**
@@ -66,6 +80,7 @@ class CustomizationGroupController extends DashboardController {
         $customization_group = CustomizationGroup::findOrFail($id);
 
         $customization_group->update($request->all());
+        $this->syncCustomizations($customization_group, $request->input('customizations'));
 
         return redirect('business\customization_groups');
 	}

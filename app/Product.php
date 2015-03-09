@@ -28,4 +28,9 @@ class Product extends Model {
     {
         return $this->belongsTo('App\User');
     }
+
+    public function menus()
+    {
+        return $this->hasMany('App\Menu', 'menus_products');
+    }
 }

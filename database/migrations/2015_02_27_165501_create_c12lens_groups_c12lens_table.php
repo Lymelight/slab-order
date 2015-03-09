@@ -14,7 +14,8 @@ class CreateC12lensGroupsC12lensTable extends Migration {
 	{
 		Schema::create('c12lens_groups_c12lens', function(Blueprint $table)
 		{
-			$table->integer('customization_group_id')->unsigned();
+            $table->increments('id');
+            $table->integer('customization_group_id')->unsigned();
 			$table->foreign('customization_group_id')->references('id')->on('customization_groups')->onDelete('cascade');
 			$table->integer('customization_id')->unsigned();
 			$table->foreign('customization_id')->references('id')->on('customizations')->onDelete('cascade');

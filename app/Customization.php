@@ -28,4 +28,12 @@ class Customization extends Model {
     {
         return $this->belongsTo('App\User');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function customizationGroups()
+    {
+        return $this->belongsToMany('App\CustomizationGroup', 'c12lens_groups_c12lens');
+    }
 }

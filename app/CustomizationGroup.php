@@ -28,4 +28,9 @@ class CustomizationGroup extends Model {
     {
         return $this->belongsTo('App\User');
     }
+
+    public function customizations()
+    {
+        return $this->belongsToMany('App\Customization', 'c12lens_groups_c12lens');
+    }
 }
