@@ -15,13 +15,20 @@ class ProductController extends DashboardController {
     }
 
     /**
-	 * Display a listing of the resource.
+	 * Display all Products a user owns.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		$data = [];
+
+        /**
+         * Display all products a user owns
+         * Populate an array with potential customization groups that the user owns for use in the embedded New Product form
+         * Send an empty array for which customization groups are selected, since we'll be creating a new record, not loading an existing one, but
+         * it's great to use the same form for both tasks
+         */
+        $data = [];
         $data['products'] = \Auth::user()->products()->get();
         $data['customization_groups'] = \Auth::user()->customizationGroups()->lists('name', 'id');
         $data['customization_groups_selected'] = [];
@@ -30,13 +37,19 @@ class ProductController extends DashboardController {
 	}
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Product in the database.
      *
      * @param ProductRequest $request
      * @return Response
      */
 	public function store(ProductRequest $request)
 	{
+        /**
+         * Request all inputs from the form, create a new Product record and automatically assign the allowed variables from inputs,
+         * Run the syncCustomizationGroups function for the product, which grabs the selected customization groups and creates the appropriate relationships
+         * on the pivot table
+         */
+
         $product = new Product($request->all());
         \Auth::user()->products()->save($product);
 
@@ -46,24 +59,17 @@ class ProductController extends DashboardController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
+	 * Show the form for editing a Product specified by an id.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit($id)
 	{
+        /**
+         * Grab the product by its ID. populate an array with potential customization groups that the user owns for use in the page's multi-select,
+         * populate an array of which (if any) are already selected
+         */
 		$product = Product::findOrFail($id);
         $data['product'] = $product;
         $data['customization_groups'] = \Auth::user()->customizationGroups()->lists('name', 'id');
@@ -73,7 +79,7 @@ class ProductController extends DashboardController {
 	}
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Product in the database
      *
      * @param  int $id
      * @param ProductRequest $request

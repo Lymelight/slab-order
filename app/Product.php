@@ -22,6 +22,8 @@ class Product extends Model {
     ];
 
     /**
+     * A product belongs to a single user
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function user()
@@ -29,11 +31,22 @@ class Product extends Model {
         return $this->belongsTo('App\User');
     }
 
+    /**
+     * A product can be used on many menus, and a menu can have many products
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function menus()
     {
         return $this->belongsToMany('App\Menu', 'menus_products');
     }
 
+
+    /**
+     * A product can have many customization groups assigned to it, and a customization group can be assigned to many products
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function customizationGroups()
     {
         return $this->belongsToMany('App\CustomizationGroup', 'products_customization_groups');

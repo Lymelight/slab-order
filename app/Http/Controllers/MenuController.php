@@ -10,13 +10,14 @@ use Illuminate\Http\Request;
 class MenuController extends DashboardController {
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a list of all the Menus a user owns
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		$data = [];
+
+        $data = [];
         $data['menus'] = \Auth::user()->menus()->get();
 
         return view('menus.index', $data);
@@ -24,13 +25,16 @@ class MenuController extends DashboardController {
 
 
     /**
-     * Store a newly created resource in storage.
+     * Store the newly created Menu in the database
      *
      * @param MenuRequest $request
      * @return Response
      */
 	public function store(MenuRequest $request)
 	{
+        /**
+         * Request all form inputs, create a new Menu Record belonging to the user
+         */
         $menu = new Menu($request->all());
         \Auth::user()->menus()->save($menu);
 
@@ -38,22 +42,17 @@ class MenuController extends DashboardController {
 	}
 
 
-    /**
-     * @param $id
-     */
-    public function show($id)
-    {
-
-    }
-
 	/**
-	 * Show the form for editing the specified resource.
+	 * Display the form for editing an existing Menu record
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit($id)
 	{
+        /**
+         * Find
+         */
         $menu = Menu::findOrFail($id);
 
         return view('menus.edit', compact('menu'));

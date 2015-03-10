@@ -36,11 +36,13 @@
 
 <!-- Open_hour Time Input -->
 <div class="form-group">
+    {!! Form::label('open_hour', 'Open Hour') !!}
     {!! Form::input('time', 'open_hour', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Close_hour Time Input -->
 <div class="form-group">
+    {!! Form::label('close_hour', 'Close Hour') !!}
     {!! Form::input('time', 'close_hour', null, ['class' => 'form-control']) !!}
 </div>
 

@@ -19,7 +19,7 @@ class CustomizationGroupController extends DashboardController {
     }
 
     /**
-	 * Display a listing of the resource.
+	 * Display a listing of all Customization Groups belong to a user.
 	 *
 	 * @return Response
 	 */
@@ -35,7 +35,7 @@ class CustomizationGroupController extends DashboardController {
 	}
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Customization Group in the database.
      *
      * @param CustomizationGroupRequest $request
      * @internal param $CustomizationGroupRequest
@@ -52,7 +52,7 @@ class CustomizationGroupController extends DashboardController {
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
+	 * Show the form for editing an existing Customization Group record.
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -69,7 +69,7 @@ class CustomizationGroupController extends DashboardController {
 	}
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Customization Group in the database.
      *
      * @param  int $id
      * @param LocationRequest $request

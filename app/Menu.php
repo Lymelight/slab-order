@@ -26,6 +26,12 @@ class Menu extends Model {
         return $this->belongsTo('App\User');
     }
 
+
+    /**
+     * A menu has many products, and products can belong to many menus
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function products()
     {
         return $this->belongsToMany('App\Product', 'menus_products');

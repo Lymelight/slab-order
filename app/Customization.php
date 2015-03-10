@@ -22,6 +22,8 @@ class Customization extends Model {
     ];
 
     /**
+     * A Customization belongs to exactly one user
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function user()
@@ -29,6 +31,8 @@ class Customization extends Model {
         return $this->belongsTo('App\User');
     }
     /**
+     * A Customization can belong to many Customization Groups, and a Customization Group has many Customizations
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function customizationGroups()

@@ -30,6 +30,8 @@ class Location extends Model {
     ];
 
     /**
+     * A Location belongs to exactly one user
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()

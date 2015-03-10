@@ -37,15 +37,6 @@ class MenuBuilderController extends DashboardController {
         return redirect('business\menu_builder');
 	}
 
-
-    /**
-     * @param $id
-     */
-    public function show($id)
-    {
-
-    }
-
 	/**
 	 * Show the form for editing the specified resource.
 	 *
@@ -55,8 +46,10 @@ class MenuBuilderController extends DashboardController {
 	public function edit($id)
 	{
         $menu = Menu::findOrFail($id);
+        $data['menu'] = $menu;
+        $data['products'] = \Auth::user()->products()->lists('name', 'id');
 
-        return view('menubuilder.edit', compact('menu'));
+        return view('menubuilder.edit', $data);
 	}
 
 	/**
