@@ -2,6 +2,6 @@
 
 @section('content')
 
-test????
+Dashboard View. Nothing here yet.
 
 @stop

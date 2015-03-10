@@ -27,11 +27,11 @@
                     {{ $product['name'] }}
                 </td>
                 <td>
-                    {{ $product['price'] }}
+                    {{ money_format("%i", $product['price']) }}
                 </td>
                 <td>
                     @foreach($product->customizationGroups as $customization_group)
-                        {{$customization_group['name']}}
+                        <a href="{{ action('CustomizationGroupController@edit', [$customization_group->id]) }}">{{$customization_group['name']}}</a>
                     @endforeach
                 </td>
                 <td>

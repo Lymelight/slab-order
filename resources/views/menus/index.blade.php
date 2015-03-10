@@ -17,7 +17,7 @@
                     Products
                 </td>
                 <td>
-                    Location
+                    Locations
                 </td>
                 <td>
 
@@ -27,7 +27,7 @@
         @forelse($menus as $menu)
             <tr>
                 <td>
-                    {{ $menu['name'] }}
+                    <a href="{{action('MenuBuilderController@editMenu', [$menu->id])}}">{{ $menu['name'] }}</a>
                 </td>
                 <td>
                     {{ $menu['category_count'] }}

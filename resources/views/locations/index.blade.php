@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1> Locations: </h1>
+    <h1> Locations </h1>
     <table class="table table-striped">
         <tbody>
             <thead>
@@ -27,7 +27,7 @@
         @forelse($locations as $location)
             <tr>
                 <td>
-                    {{ $location['name'] }}
+                    <a href="{{ action('LocationController@edit', [$location->id]) }}">{{ $location['name'] }}</a>
                 </td>
                 <td>
                     {{ $location['address1'] }}
@@ -39,7 +39,7 @@
                     Open?
                 </td>
                 <td>
-                    <a href="{{ action('LocationController@edit', [$location->id]) }}">Edit</a>
+
                 </td>
             </tr>
         @empty

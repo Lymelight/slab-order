@@ -11,7 +11,7 @@ use Request;
 class CustomizationController extends DashboardController {
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a list of Customizations belonging to the user.
 	 *
 	 * @return Response
 	 */
@@ -49,7 +49,7 @@ class CustomizationController extends DashboardController {
     {
         $customization = Customization::findOrFail($id);
 
-        return view('customization.edit', compact('customization'));
+        return view('customizations.edit', compact('customization'));
 	}
 
     /**
@@ -65,7 +65,7 @@ class CustomizationController extends DashboardController {
 
         $customization->update($request->all());
 
-        return redirect('business\customization');
+        return redirect('business\customizations');
 	}
 
 	/**

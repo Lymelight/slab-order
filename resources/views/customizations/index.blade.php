@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1> Customizations: </h1>
+    <h1> Customizations </h1>
     <table class="table table-striped">
         <tbody>
             <thead>
@@ -24,7 +24,7 @@
                     {{ $customization['name'] }}
                 </td>
                 <td>
-                    {{ $customization['price'] }}
+                    {{ money_format("%i", $customization['price']) }}
                 </td>
                 <td>
                     <a href="{{ action('CustomizationController@edit', [$customization->id]) }}">Edit</a>

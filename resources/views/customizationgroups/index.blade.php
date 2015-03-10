@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <h1> Customization Groups: </h1>
+    <h1> Customization Groups </h1>
     <div class="panel-group" id="customizationGroups" role="tablist" aria-multiselectable="true">
         @forelse($customization_groups as $customization_group)
                 <div class="panel panel-default">
@@ -11,17 +11,17 @@
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="customizatonGroups" href="#collapse{{$customization_group['id']}}" aria-expanded="true" aria-controls="collapse{{$customization_group['id']}}">
                                 {{$customization_group['name']}}
+
+                                <a style="float: right;" href="{{ action('CustomizationGroupController@edit', [$customization_group->id]) }}">Edit</a>
                             </a>
                         </h4>
                     </div>
                     <div id="collapse{{$customization_group['id']}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{$customization_group['id']}}">
                         <div class="panel-body">
 
-                            <a href="{{ action('CustomizationGroupController@edit', [$customization_group->id]) }}">Edit</a>
-
                             <ul>
                                 @foreach($customization_group->customizations as $customization)
-                                    <li>{{$customization['name']}}</li>
+                                    <li><a href="{{action('CustomizationController@edit', $customization->id)}}">{{$customization['name']}}</a></li>
                                 @endforeach
                             </ul>
 

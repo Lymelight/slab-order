@@ -6,9 +6,13 @@
     <table class="table table-striped">
         @forelse($menus as $menu)
             <div class="component">
-                {{ $menu['name'] }}
-                {{ $menu['location_count'] }}
-                <a href="{{ action('MenuBuilderController@editMenu', [$menu->id]) }}">Edit</a>
+                <div class="row">
+                    <b>{{ $menu['name'] }}</b>
+                    <a href="{{ action('MenuBuilderController@editMenu', [$menu->id]) }}" class="btn btn-success" style="float: right;">Build Menu</a>
+                </div>
+               <div class="row">
+                   <p>Active at {{ $menu['location_count'] }} locations, contains {{ $menu['product_count'] }} products</p>
+               </div>
             </div>
         @empty
             <span>No menus to display</span>
