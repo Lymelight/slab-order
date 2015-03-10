@@ -29,7 +29,7 @@ class DashboardController extends Controller {
 	 */
 	public function index()
 	{
-		return view('business\dashboard');
+		return view('business/dashboard');
 	}
 
 }
