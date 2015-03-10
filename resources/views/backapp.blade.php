@@ -40,8 +40,8 @@
                     <li><a href="/business/products">Products</a></li>
                     <li><a href="/business/customization_groups">Customization Groups</a></li>
                     <li><a href="/business/customizations">Customizations</a></li>
-					<li><a href="/business/orders">Orders</a></li>
-					<li><a href="/business/ordermaker">OrderMaker</a></li>
+					<li class="disabled"><a href="#">Orders</a></li>
+					<li class="disabled"><a href="#">OrderMaker</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

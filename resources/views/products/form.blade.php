@@ -1,18 +1,21 @@
-{!! Form::model($product, ['method' => 'PATCH', 'action' => ['ProductController@update', $product->id]]) !!}
-
-@include('errors.list')
-
-<!-- Product Form Select -->
+<!-- Name Form Input -->
 <div class="form-group">
-    {!! Form::label('product', 'Add a New Product') !!}
-    {!! Form::select('product', ['defaults'], null, ['class' => 'form-control']) !!}
-
-    <!-- Form Submit Button -->
-    <div class="form-group">
-        {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
-    </div>
+    {!! Form::label('name', 'Name') !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+</div>
+<!-- Price Form Input -->
+<div class="form-group">
+    {!! Form::label('price', 'Price') !!}
+    {!! Form::text('price', null, ['class' => 'form-control']) !!}
 </div>
 
-{!! Form::close() !!}
+<!-- Customization_groups Form Multiple Select -->
+<div class="form-group">
+    {!! Form::label('customization_groups', 'Customization Groups') !!}
+    {!! Form::select('customization_groups[]', $customization_groups, $customization_groups_selected, ['class' => 'form-control', 'multiple']) !!}
+</div>
 
-
+<!-- Form Submit Button -->
+<div class="form-group">
+    {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary']) !!}
+</div>

@@ -8,7 +8,7 @@
             <div class="component">
                 {{ $menu['name'] }}
                 {{ $menu['location_count'] }}
-                <a href="{{ action('MenuBuilderController@edit', [$menu->id]) }}">Edit</a>
+                <a href="{{ action('MenuBuilderController@editMenu', [$menu->id]) }}">Edit</a>
             </div>
         @empty
             <span>No menus to display</span>
