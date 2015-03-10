@@ -35,4 +35,14 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
 
+    /**
+     * Redirect property for Auth module
+     *
+     * @return string
+     */
+    public function redirectPath()
+    {
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/business/dashboard';
+    }
+
 }
